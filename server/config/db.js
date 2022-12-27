@@ -1,15 +1,13 @@
+
 const mongoose = require('mongoose');
-const colors = require('colors');
-const port = process.env.PORT || 6000; 
+const port = process.env.PORT || 5000;
 
-const connectDB = async () => {
-    try{
-        const conn= await mongoose.connect(process.env.MONGO_URI)
-        console.log(`MongoDB Connected:http://localhost:${port}/graphql `.cyan.underline)
-    }catch(err){
-        console.log(`Error: ${err.message}`.red)
-        process.exit(1)
-    }
-}
+const connectDB = async () =>
+{
+    const conn = await mongoose.connect(process.env.MONGO_URI);
 
-module.exports = connectDB
+    console.log(`MongoDB Connected: ${conn.connection.host} http://localhost:${port}/graphql`.cyan.underline.bold);
+};
+
+module.exports = connectDB;
+
