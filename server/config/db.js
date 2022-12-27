@@ -1,5 +1,6 @@
 
 const mongoose = require('mongoose');
+const colors = require('colors');
 const port = process.env.PORT || 5000;
 
 const connectDB = async () =>
