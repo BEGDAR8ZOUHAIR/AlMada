@@ -101,6 +101,7 @@ const mutation = new GraphQLObjectType ({
 
                 });
                 return client.save();
+
             }
         } 
     }
@@ -110,6 +111,7 @@ const mutation = new GraphQLObjectType ({
 
 module.exports = new GraphQLSchema({
     query: RootQuery,
+    mutation,
 });
 
 
