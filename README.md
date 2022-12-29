@@ -99,5 +99,11 @@ mutation {
 ```
 
 
+## for client side 
+```
+npm install apollo-boost react-apollo graphql
+```
+
+
 
 
