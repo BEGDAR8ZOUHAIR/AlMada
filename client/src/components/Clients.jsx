@@ -2,6 +2,14 @@ import { useQuery } from "@apollo/client";
 import ClientRow from "./ClientRow";
 import Spinner from "./Spinner";
 import { GET_CLIENTS } from "../queries/clientQueries";
+import {
+  MDBBadge,
+  MDBBtn,
+  MDBTable,
+  MDBTableHead,
+  MDBTableBody,
+} from "mdb-react-ui-kit";
+
 
 export default function Clients() {
   const { loading, error, data } = useQuery(GET_CLIENTS);
@@ -12,21 +20,38 @@ export default function Clients() {
   return (
     <>
       {!loading && !error && (
-        <table className="table table-hover mt-3">
-          <thead>
+        // <table className="table table-hover mt-3">
+        //   <thead>
+        //     <tr>
+        //       <th>Name</th>
+        //       <th>Email</th>
+        //       <th>Phone</th>
+        //       <th></th>
+        //     </tr>
+        //   </thead>
+        //   <tbody>
+        //     {data.clients.map((client) => (
+        //       <ClientRow key={client.id} client={client} />
+        //     ))}
+        //   </tbody>
+        // </table>
+        <MDBTable align="middle">
+          <MDBTableHead>
             <tr>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Phone</th>
-              <th></th>
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              {/* <th scope="col">Status</th> */}
+              <th scope="col">Phone</th>
+              <th scope="col">Actions</th>
             </tr>
-          </thead>
-          <tbody>
-            {data.clients.map((client) => (
+          </MDBTableHead>
+          <MDBTableBody>
+             {data.clients.map((client) => (
               <ClientRow key={client.id} client={client} />
             ))}
-          </tbody>
-        </table>
+
+          </MDBTableBody>
+        </MDBTable>
       )}
     </>
   );
