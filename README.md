@@ -101,8 +101,10 @@ mutation {
 
 ## for client side 
 ```
-npm install apollo-boost react-apollo graphql
+npm i @apollo/client graphql react-router-dom react-icons
 ```
+
+
 
 
 
