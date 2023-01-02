@@ -104,6 +104,26 @@ mutation {
 npm i @apollo/client graphql react-router-dom react-icons
 ```
 
+# Create Docker image
+
+1 - Create a Dockerfile in the root directory of the project
+```	
+docker build -t my-image .
+```
+2 - Run the image
+```
+docker run -p 3000:3000 my-image
+```
+3 - Open the browser and go to http://localhost:5000/graphql
+
+# Create Docker compose
+1 - Create a docker-compose.yml file in the root directory of the project
+```
+ docker compose up
+```
+
+
+
 
 
 
