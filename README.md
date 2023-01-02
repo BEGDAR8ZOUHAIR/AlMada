@@ -105,6 +105,8 @@ npm i @apollo/client graphql react-router-dom react-icons
 ```
 
 # Create Docker image
+![Screenshot 2023-01-02 014632](https://user-images.githubusercontent.com/93929557/210188822-e013d379-ebff-44f8-a17d-3159c13e5ece.png)
+
 
 1 - Create a Dockerfile in the root directory of the project
 ```	
